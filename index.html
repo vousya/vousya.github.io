@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <h1>Hello from GitHub Pages!</h1>
+  <p id="user-info"></p>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+    const user = tg.initDataUnsafe.user;
+    if (user) {
+      document.getElementById('user-info').textContent =
+        `Hello, ${user.first_name} (@${user.username})!`;
+    }
+  </script>
+</body>
+</html>
